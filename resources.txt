@@ -5,8 +5,76 @@ Backlog: https://nulab.com/learn/software-development/git-tutorial/git-basics/
 =========================================================================================
 
 
+> There are two ways to create a local repository on your machine: you can create a new repository from scratch using a file folder on your computer, or you can clone an existing repository.
+
+	>> You can create a new repo from scratch using the git init command.
+	>> It can be used to introduce Git into an existing, unversioned project so that you can start tracking changes.
+	
+	>> You can copy a remote repository onto your local machine using the git clone command.
+	>> By default, git clone will automatically set up a local master branch that tracks the remote master branch it was cloned from.
+
+> A cloned repository has the same history log as the original one.
+> You can refer and backtrack to any of those commits within your local repository.
+
+> Git does not automatically save every change you make.
+> You must tell Git which changes you want to be recorded by staging those changes.
+> After staging, you can then commit the changes so that they are recorded in the repo.
+
+	>> As mentioned in the Git workflow section, the working tree is where you make changes. There you can edit files, add new files, and remove files that are no longer needed.
+	>> Once a file has been changed in the working tree, it is noted as modified in the index (e.g., the staging area where new commits are prepared) where it sits between the repository and the working tree.
+	>> Changes made in the working tree are not saved directly to the repository. All changes are first staged in the index and then saved in the repo. Only the files in the index are committed to the repo.
+
+> The git commit command lets you record file changes in the repository's Git history.
+> Every change you commit will be viewable in the respective file or directory in chronological order.
+> When committing your changes, you are required to enter a commit message.
+> The commit message should accurately describe the changes you're making.
+
+> One of the most valuable features of Git is the ability to undo mistakes.
+> When you make a new commit, Git stores a snapshot of your project so that you can go back to an earlier version when you need to.
+
+	>> There are two ways to undo changes: git revert and git reset.
+	>> You can use the git revert command to safely undo a commit that has already been pushed.
+	>> While you can also delete a previous commit from the history using git reset or git rebase -i, it is generally not a good idea because it causes the remote repository to become desynchronized with the local repositories of other members.
+	
+	>> You can discard commits that you no longer need using the git reset command.
+	>> You can specify the scope for the reset command by going into reset mode.
+	
+> Remote repositories allow us to share our changes with other members of the team.
+> They can be on a private server, on a different computer than yours, or hosted using a service like Backlog.
+> Wherever yours is hosted, you’ll need to be able to sync your local repository with the remote repository frequently.
+> You’ll do this using three commands: git push, git pull, and git merge.
+
+	>> In order to start sharing changes with others, you have to push them to a remote repository using the "push" command.
+	>> This will cause the remote repository to update and synchronize with your local repository.
+	
+	>> Whenever somebody pushes their changes to the shared remote repository, your local repository becomes out of date.
+	>> To re-synchronize your local repository with the newly updated remote repository, simply run the git pull operation.
+	>> When the pull is executed, the latest revision history will download from the remote repository and import to your local repository.
+	
+	>> Your push to the remote repository will be rejected if your local repository is out of date, possibly because there are some updates on the remote repository that you do not have locally yet.
+	>> If that is the case, you'll have to use the git merge command to grab the latest change from the remote repository before you are allowed to push.
+	>> Git enforces this to ensure that changes made by other members get retained in the history.
+	>> During a "merge", Git will attempt to automatically apply those history changes and merge them with the current branch.
+	>> However, if there is a conflict in changes, Git will throw an error prompting you to resolve the conflict manually.
+		
+		>>> When merging two branches, you may come across a conflict that needs resolving before you can properly complete the merge.
+		>>> For example, when two or more members make changes on the same part of a file in the two different branches (remote and local branches in this case), Git will not be able to automatically merge them.
+		>>> When this happens, Git will add some standard conflict-resolution markers to the conflicting file.
+		>>> The markers help you figure out which sections of the file need to be manually resolved.
+
+> There are times when you need to revise your local commit history.
+> This can include anything from changing your commit message to changing the order of your commits to squashing commits together.
+
+	>> You can modify the most recent commit in the same branch by running git commit –amend.
+
+
+
+
+=========================================================================================
+=========================================================================================
 =========================================================================================
 git --version
+git config --list
 git init
 git status
 git add .
@@ -14,8 +82,8 @@ git commit -m "Commit Message"
 git branch -m master
 
 
-
-
+=========================================================================================
+=========================================================================================
 =========================================================================================
 git remote add origin https://washiur17@bitbucket.org/rubelhasann/textlyzing.git
 git push origin master
@@ -33,14 +101,15 @@ git pull origin release-an-1.1.1
 git branch -D branch-name
 git push origin feature/EBD-2980
 =========================================================================================
-git init
-git config --list
+
+
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 git config --global user.password "your password"
-git config user.email "you@example.com"
-git config user.name "Your Name"
-git config user.password "your password"
+
+git config user.email "washiur17@gmail.com"
+git config user.name "Washiur"
+git config user.password "ghrasE3pyOd9~?oA3WD3cG0J@5XeTAk}"
 git add Git_Session_DOL.pdf
 git status
 git add .
