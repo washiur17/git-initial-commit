@@ -1,0 +1,97 @@
+=========================================================================================
+Git Tutorial for Beginners: Learn Git in 1 Hour: https://www.youtube.com/watch?v=8JJ101D3knE | Programming with Mosh
+Git & GitHub Crash Course For Beginners: https://www.youtube.com/watch?v=SWYqp7iY_Tc | Traversy Media
+Backlog: https://nulab.com/learn/software-development/git-tutorial/git-basics/
+=========================================================================================
+
+
+=========================================================================================
+git --version
+git init
+git status
+git add .
+git commit -m "Commit Message"
+git branch -m master
+
+
+
+
+=========================================================================================
+git remote add origin https://washiur17@bitbucket.org/rubelhasann/textlyzing.git
+git push origin master
+=========================================================================================
+git branch
+git push --set-upstream origin feature/EBD-2604
+git push
+git branch -vv
+=========================================================================================
+git branch -vv
+git fetch origin
+git checkout release-an-1.1.1
+git checkout -b feature/EBD-2980
+git pull origin release-an-1.1.1
+git branch -D branch-name
+git push origin feature/EBD-2980
+=========================================================================================
+git init
+git config --list
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git config --global user.password "your password"
+git config user.email "you@example.com"
+git config user.name "Your Name"
+git config user.password "your password"
+git add Git_Session_DOL.pdf
+git status
+git add .
+git remote add origin https://github.com/taruncse/GitExperiment.git
+git push -u origin master
+git branch branch_name
+git checkout branch_name
+=========================================================================================
+>>> 
+>>> touch index.html
+>>> git init
+>>> git config --global user.name 'washiur17'
+>>> git config --global user.email 'washiur17@gmail.com'
+>>> git add index.html
+>>> git status
+>>> git rm --cached index.html
+>>> git add *.html
+>>> git add .
+>>> git commit
+	>> i, esc, wq
+>>> git commit -m 'Changed APP'
+>>> touch .gitignore
+	>> log.txt
+	>> /dir2
+	>> *.txt
+>>> git branch login
+>>> git checkout login
+>>> git checkout master
+>>> git merge login
+>>> git remote
+>>> git remote add origin https://github.com/washiur17/myappgit.git
+>>> git push -u origin master
+>>> git push
+>>> git clone https://github.com/washiur17/myappgit.git
+>>> git pull
+=========================================================================================
+# BASH = Born Again Shell
+>>> git --version
+>>> git config --list
+>>> git config --global user.name "Washiur Rahman"
+>>> git config --global user.name washiur17@gmail.com
+>>> git config --global core.editor "code --wait" [wait flag: wait untill close the editor]
+>>> git config --global -e
+>>> git config --global core.autocrlf true [for windows]
+>>> git config --global core.autocrlf input [for mac]
+>>> git config --help
+>>> git config --h
+>>> git init
+# Install posh-git: https://sillevl.gitbooks.io/software-installation-guide/content/git/posh-git/poshgit.html
+=========================================================================================
+
+
+
+
