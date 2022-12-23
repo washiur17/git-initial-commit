@@ -1,10 +1,13 @@
 =========================================================================================
+=========================================================================================
+=========================================================================================
 Git Tutorial for Beginners: Learn Git in 1 Hour: https://www.youtube.com/watch?v=8JJ101D3knE | Programming with Mosh
 Git & GitHub Crash Course For Beginners: https://www.youtube.com/watch?v=SWYqp7iY_Tc | Traversy Media
 Backlog: https://nulab.com/learn/software-development/git-tutorial/git-basics/
+
 =========================================================================================
-
-
+=========================================================================================
+=========================================================================================
 > There are two ways to create a local repository on your machine: you can create a new repository from scratch using a file folder on your computer, or you can clone an existing repository.
 
 	>> You can create a new repo from scratch using the git init command.
@@ -67,9 +70,6 @@ Backlog: https://nulab.com/learn/software-development/git-tutorial/git-basics/
 
 	>> You can modify the most recent commit in the same branch by running git commit –amend.
 
-
-
-
 =========================================================================================
 =========================================================================================
 =========================================================================================
@@ -81,10 +81,11 @@ git add .
 git commit -m "Commit Message"
 git branch -m master
 
+=========================================================================================
+=========================================================================================
+=========================================================================================
 
-=========================================================================================
-=========================================================================================
-=========================================================================================
+
 git remote add origin https://washiur17@bitbucket.org/rubelhasann/textlyzing.git
 git push origin master
 =========================================================================================
@@ -162,5 +163,35 @@ git checkout branch_name
 =========================================================================================
 
 
+
+=========================================================================================
+=========================================================================================
+=========================================================================================
+Adding a local repository to GitHub with GitHub CLI:
+----------------------------------------------------
+> In the command line, navigate to the root directory of your project.
+
+> Initialize the local directory as a Git repository.
+	>> git init -b main
+
+> Stage and commit all the files in your project.
+	>> git add . && git commit -m "initial commit"
+
+> To create a repository for your project on GitHub, use the 
+	>> gh repo create
+> subcommand.
+> When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository.
+> If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
+
+> Follow the interactive prompts.
+> To add the remote and push the repository, confirm yes when asked to add the remote and push the commits to the current branch.
+
+> Alternatively, to skip all the prompts, supply the path to the repository with the --source flag and pass a visibility flag (--public, --private, or --internal).
+> For example,
+	>> gh repo create --source=. --public
+> Specify a remote with the --remote flag. To push your commits, pass the --push flag.
+=========================================================================================
+=========================================================================================
+=========================================================================================
 
 
