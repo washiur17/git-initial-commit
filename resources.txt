@@ -169,7 +169,7 @@ git checkout branch_name
 =========================================================================================
 Take GitHub to the command line: https://cli.github.com/
 Installing gh on Linux and BSD: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
-
+https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
 
 Adding a local repository to GitHub with GitHub CLI:
 ----------------------------------------------------
@@ -183,6 +183,7 @@ Adding a local repository to GitHub with GitHub CLI:
 
 > To create a repository for your project on GitHub, use the 
 	>> gh repo create
+	>> gh auth login
 > subcommand.
 > When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository.
 > If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
