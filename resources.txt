@@ -167,6 +167,10 @@ git checkout branch_name
 =========================================================================================
 =========================================================================================
 =========================================================================================
+Take GitHub to the command line: https://cli.github.com/
+Installing gh on Linux and BSD: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+
+
 Adding a local repository to GitHub with GitHub CLI:
 ----------------------------------------------------
 > In the command line, navigate to the root directory of your project.
